@@ -4,7 +4,8 @@ import json
 # Check if the file "data.json" exists.
 if os.path.isfile("data.json"):
     # If it does, read "data.json" into the variable `data`
-
+    with open("data.json", "r") as f:
+        data = f.read() 
     ####
     #### YOUR CODE HERE 
     ####
@@ -19,6 +20,9 @@ recommendation = input("What book/movie/podcast/etc. would you recommend? ")
 
 # Add the new user and recommendation to the `data` dictionary
 data[name] = recommendation
+with open("data.json", "w") as f:
+    f.write(data)
+
 
 # Write the `data` variable to the file "data.json"
 

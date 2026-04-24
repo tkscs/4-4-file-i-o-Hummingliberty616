@@ -11,7 +11,9 @@ image = """
 """
 
 # Write the string `webpage` to a file called "hello.html"
-
+with open("hello,html", "w") as f:
+    f.write("webpage")
+    
 ####
 #### YOUR CODE HERE 
 ####
